@@ -1,0 +1,14 @@
+name: c_work
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - pandas
+  - numpy
+  - tensorflow
+  - scikit-learn
+  - pip:
+    - coloredlogs==14.0
+    - flask-compress==1.5.0
+    - networkx==2.5
+    - tqdm
