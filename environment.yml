@@ -7,8 +7,12 @@ dependencies:
   - numpy
   - tensorflow
   - scikit-learn
+  - jupyterlab
+  - matplotlib
+  - seaborn
   - pip:
     - coloredlogs==14.0
     - flask-compress==1.5.0
     - networkx==2.5
     - tqdm
+    - ipython
