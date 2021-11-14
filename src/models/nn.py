@@ -22,10 +22,12 @@ class FeedForward:
         self._model.add(Dense(units=8, activation="relu"))
         self._model.add(Dense(self.output_size, activation="linear"))
         self._model.compile(loss="mse", optimizer=self.opt(**self.opt_param))
+        # self._model.compile(loss="mse", optimizer=Adam(lr=1e-6))
 
-    def predict(self, args):
-        return self._model.predict(*args)
-
+    def predict(self, input):
+        return self._model.predict(input)
+    def fit(self, *args, **kwargs):
+        return self._model.fit(*args,**kwargs)
     @property
     def model(self):
         return self._model
